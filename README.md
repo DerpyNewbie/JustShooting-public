@@ -12,7 +12,7 @@
 
 ## Where to Look?
 
-基本的にゲームのアセットに関しては `Assets/JustShooting/` 下にまとめてあります。 (以下 `Assets/JustSHooting/` 省略)
+基本的にゲームのアセットに関しては `Assets/JustShooting/` 下にまとめてあります。 (以下 `Assets/JustShooting/` 省略)
 
 シーン自体は `Scenes/JustShooting.unity` の単一です。遷移はしません。 (3日なのでね...)
 
@@ -42,7 +42,7 @@ UnityEvent `onHit` で呼び出している感じ。
 銃から出るラインのエフェクト (言われないと気づかない) と、スコアが加算されるタイミングで的に表示されるエフェクトに関しては、一応
 Object Pooling をしています。
 
-`Scripts/BulletEffect.cs`, `Scripts/ScoreEffect.cs`, はどちらも `Scripts/PoolBehaviourBase.cs#PoolBehaviour`
+`Scripts/BulletEffect.cs`, `Scripts/ScoreEffect.cs`, はどちらも `Scripts/PoolBehaviourBase.cs#PooledBehaviourBase`
 を継承しており、
 `Scripts/PoolBehaviourBase.cs#PoolBehaviourBase` (アホネーミング過ぎる。"BehaviourPoolBase" が実態に合っている) を継承した
 `Scripts/BulletEffectPool.cs`, `Scripts/ScoreEffectPool.cs` などを `IObjectPool<T>` の実態として引っ張ってくることで、お手軽
