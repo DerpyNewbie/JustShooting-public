@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a4ff16dd0e60b429b198cf6aa8367b, type: 3}
+  m_Name: Hard
+  m_EditorClassIdentifier: JustShooting::JustShooting.TargetData
+  maxHp: 300
+  material: {fileID: 2100000, guid: d926aacd9d68a6e40a3b194bce6c52b4, type: 2}
+  healthBarColor: {r: 0.2941177, g: 0, b: 0.509804, a: 1}
