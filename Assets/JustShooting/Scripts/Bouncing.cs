@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 namespace JustShooting
 {
+    // COMMENTARY: バウンスしてるテキストってやっぱり注目惹くじゃないですか。
     public class Bouncing : MonoBehaviour
     {
         [SerializeField]

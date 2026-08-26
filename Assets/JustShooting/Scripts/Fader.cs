@@ -9,11 +9,13 @@ namespace JustShooting
         [SerializeField]
         private Volume volume;
 
+        // COMMENTARY: static なのなんだかなぁって感じ、時間的制約で難しかったけど Zenject とか学んでおきたいな (自作 DI モドキはしたことあるけど...)
         private static Fader Instance { get; set; }
 
         private void Awake()
         {
             Instance = this;
+            // COMMENTARY: ゲーム起動時にも一応フェードするようになってます。細かい。
             FadeIn().Forget();
         }
 
@@ -23,6 +25,7 @@ namespace JustShooting
             await DOTween.To(() => volume.weight, x => volume.weight = x, to, .25f).ToUniTask();
         }
 
+        // COMMENTARY: フェードインとアウトって命名分かりづらくないですか? ゲーム画面自体がブラックアウトから戻ってくるのでフェードインって名前ではあります。
         public static async UniTask FadeIn()
         {
             if (Instance == null) return;

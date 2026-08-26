@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 namespace Testing
 {
+    // COMMENTARY: 関係ないっす... 友人にダッシュで遅れてついてくるカメラどうやって実装するのか教えてたときに書いたやつっす...
     public class CharacterMove : MonoBehaviour
     {
         [SerializeField]

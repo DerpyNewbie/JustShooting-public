@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// COMMENTARY: あぁ... これは関係なくて... 友人にダッシュで遅れてついてくるカメラどうやって実装するのか教えてたときに書いたやつっすね...
 public class CameraController : MonoBehaviour
 {
     [SerializeField]

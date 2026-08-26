@@ -37,6 +37,7 @@ namespace JustShooting
         {
             scoreText.text = $"Score: {game.Score:F0}";
             accText.text = $"Acc: {game.Accuracy:P0}";
+            // COMMENTARY: 10秒以下は小数点表示したほうがいいよなぁと思いつつ、当日早朝に追加したが判定が逆だった凡ミスである。見ないでほしいよね。
             timeText.text = $"Time: {(game.TimeRemaining < 10 ? game.TimeRemaining.ToString("F0") : game.TimeRemaining.ToString("F1"))}s";
         }
     }

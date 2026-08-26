@@ -14,7 +14,7 @@ namespace JustShooting
         Ok,
         Pikon,
         Excellent,
-        StageClear,
+        StageClear, // COMMENTARY: 実は StageClear と TekuTekuTeku は利用してないが存在はする。ゲーム終了時と開始時に利用予定だった。
         TekuTekuTeku,
         GameOver,
         SeeYou,
@@ -25,11 +25,14 @@ namespace JustShooting
     {
         [SerializeField]
         private AudioSource audioSource;
+
+        // COMMENTARY: 一応ランダムな SE を取得できるように 1 - n の関係で保持していて、Reload と Excellent で 2 つ以上のクリップがランダムで取得されます。
         [SerializeField]
         private SerializableDictionary<AnnouncementType, List<AudioClip>> announcements;
 
         private AnnouncementType _lastAnnouncementType;
 
+        // COMMENTARY: うおｗ static うおｗ でも楽だから OK です。
         private static Announcer Instance { get; set; }
 
         private void Awake()
@@ -65,6 +68,7 @@ namespace JustShooting
 
         private void Impl_Play(AnnouncementType type)
         {
+            // COMMENTARY: アナウンサーから同時に一つのセリフしか発さないのはこだわりポイント。被った場合は後のアナウンスがキャンセルされる方針を取っていました。今考えるとキャンセルされるべきは先のアナウンスで、逆かも。
             if (audioSource.isPlaying && !ShouldOverrideLastAnnouncement(_lastAnnouncementType)) return;
             var clip = GetClip(type);
             PlayClip(clip);

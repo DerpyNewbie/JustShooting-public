@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 namespace JustShooting
 {
+    // COMMENTARY: 的を倒したときに出てくるスコアのエフェクト。いい感じです。
     public class ScoreEffect : PooledBehaviourBase<ScoreEffect>
     {
         [SerializeField]

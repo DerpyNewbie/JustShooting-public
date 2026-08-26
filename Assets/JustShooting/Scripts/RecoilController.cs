@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 namespace JustShooting
 {
+    // COMMENTARY: 3日外に作ったと言っても過言ではない。ズルである。前作 LetsJustDuel!!!!!! や、NewbieExperiment, CenturionSystem などで利用したコードをそのまま流用している形。
     public class RecoilController : MonoBehaviour
     {
         [SerializeField]

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 namespace JustShooting
 {
+    // COMMENTARY: 実はアクセシビリティを前面に推していた今作、英語と日本語対応するためにテキストを入れ替える必要があったので、この形で実装しました。
     public class AlternatingText : MonoBehaviour
     {
         [SerializeField]

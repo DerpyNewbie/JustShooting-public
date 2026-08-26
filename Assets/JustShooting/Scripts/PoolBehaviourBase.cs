@@ -2,11 +2,13 @@
 using UnityEngine.Pool;
 namespace JustShooting
 {
+    // COMMENTARY: セルフで Release できるように親 Pool への参照を持つ。 PoolBehaviourBase で用いる Behaviour はこれを継承する必要がある。
     public abstract class PooledBehaviourBase<T> : MonoBehaviour where T : MonoBehaviour
     {
         public IObjectPool<T> Pool { get; set; }
     }
 
+    // COMMENTARY: 簡単な ObjectPool。Get 時に GameObject が Active になり、 Release 時に Inactive になる。
     public abstract class PoolBehaviourBase<T> : MonoBehaviour where T : PooledBehaviourBase<T>
     {
         [SerializeField]

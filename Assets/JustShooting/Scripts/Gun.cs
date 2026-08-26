@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 using Random = UnityEngine.Random;
 namespace JustShooting
 {
+    // COMMENTARY: シンプルなヒットスキャンの銃。
     public class Gun : MonoBehaviour
     {
         public struct OnShotArgs

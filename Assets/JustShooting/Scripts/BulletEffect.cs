@@ -3,6 +3,7 @@ using System.Threading;
 using UnityEngine;
 namespace JustShooting
 {
+    // COMMENTARY: 撃った方向に線が若干出るエフェクト。VALORANT で見てええなぁと思っていた。
     public class BulletEffect : PooledBehaviourBase<BulletEffect>
     {
         [SerializeField]

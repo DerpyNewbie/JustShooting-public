@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 namespace JustShooting
 {
+    // COMMENTARY: まぁ... 的。タイトルやリザルトにも onHit を用いて流用している。
     public class Target : MonoBehaviour
     {
         public enum HitType
